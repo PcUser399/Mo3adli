@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mo3adli</title>
+    <style>
+      body{
+        background-color: black;
+        color:white;
+      }
+      .title{
+        font-size : 44px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        line-height: 55px;
+        margin-top: 35px;
+        
+      }
+      .t2{
+        margin-left: 432px;
+      }
+      .input{
+        margin-left:207px;
+        background-color: transparent;
+        border:2px solid #3498db;
+        padding : 15px 25px;
+        border-radius: 50px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        color: white;
+        text-align: center;
+        transition: 0.25s;
+      }
+      .section{
+        padding:10px 20px;
+        font: 14px Arial ;
+        background-color: #1ebba3;
+        border: 5px solid #099983;
+        border-radius: 30px;
+        color: white;
+        margin : 0px 10px;
+        display: inline-block;
+        cursor:pointer;
+      }
+      .p{
+        margin-left:478px;
+      }
+      .Session{
+        color: gray;
+        text-transform: uppercase;
+        font: 20px serif ;
+        margin-left: 476px;
+        letter-spacing: 3px;
+        text-decoration: underline;
+        outline: none;
+      } 
+      input::placeholder {
+        font: 15px serif;
+        text-align: center;
+      }
+      .p2{
+        margin-left: 332px;
+      }
+      .calculer{
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        font: 20px serif;
+        padding: 10px 250px;
+        border: 2px solid rgb(66, 210, 66);
+        border-radius: 50px;
+        cursor: pointer;
+        margin-left: 307px;
+        transition: 0.25s;
+        outline: none;
+      }
+      .calculer:hover{
+        margin-left: 257px;
+        padding: 10px 300px;
+        background-color: rgb(66, 210, 66);
+        transition: 0.25s;
+      }
+      .press,
+      .calculer:active{
+        background-color: rgb(36, 100, 36);
+      }
+      .section:hover{
+        background-color: rgb(9, 153, 131) ;
+        border: 5px solid rgb(0, 110, 100);
+      }
+      .section:active{
+        background-color: rgb(0, 90, 80);
+      }
+      .p1:hover,
+      .p1:focus{
+        padding : 15px 60px;
+        margin-left:172px;
+        margin-right: -35px; 
+        transition: 0.25s;
+        border:2px solid rgb(66, 210, 66);
+        outline: none;
+      }
+      .p2:hover,
+      .p2:focus{
+        padding : 15px 60px;
+        margin-left:297px;
+        transition: 0.25s;
+        border:2px solid rgb(66, 210, 66);
+        outline: none;
+      }
+      .valid{
+        border:2px solid green;
+      }
+      .unValid{
+        border:2px solid red;
+      }
+      .result{
+        font-size: 25px;
+      }
+      .clear{
+        padding:5px 55px;
+        font: 20px Arial ;
+        background-color: #df0000;
+        border: 5px solid #930000;
+        border-radius: 50px;
+        color: white;
+        margin-left : 76.5px;
+        margin-right: -248.5px;
+        display: inline-block;
+        cursor:pointer;
+      }
+      .clear:hover{
+        background-color: rgb(165, 0, 0);
+        border: 5px solid rgb(105, 0, 0);
+      }
+      .clear:active{
+        background-color:rgb(75, 0, 0) ;
+      }
+      .container {
+        width: 1200px;             /* fixed size like on your laptop */
+        margin:0px auto;            /* center horizontally */
+      }
+      .tit{
+        width: 1200px; 
+        margin: 0px auto; 
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tit">
+    <p class="  title"> Calculer Moyenne et Score BAC MATHÉMATIQUES </p>
+    </div>
+    <div class="container">
+    <button class="section p">Principale</button>
+    <button class="section c">Controle</button>
+    <p class="Session">Session principale</p>
+    <input class="input p1 a1" placeholder="Math" onkeypress="if(event.key=='Enter'){enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')">
+    <input class="input p2 a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')">
+    <input class="input p1 a3" placeholder="Science" onkeypress="if(event.key=='Enter'){enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')">
+    <input class="input p2 a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')">
+    <input class="input p1 a5" placeholder="Français" onkeypress="if(event.key=='Enter'){enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')">
+    <input class="input p2 a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')">
+    <input class="input p1 a7" placeholder="Philo" onkeypress="if(event.key=='Enter'){enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')">
+    <input class="input p2 a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')">
+    <input class="input p1 a9" placeholder="Informatique" onkeypress="if(event.key=='Enter'){enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')">
+    <button class="clear" onclick="Clear()">Clear</button>
+    <input class="input p2 a10" placeholder="Option" onkeypress="if(event.key=='Enter'){enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')">
+    <p></p>
+    <button class="calculer a11" onclick="display()">Calculer</button>
+    <p></p>
+    <p class="result title" onclick=""></p>
+    </div>
+    <script>
+      const matiere = ['Math','Physique','Science','Arbi','Français','Anglais','Philo','Sport','Info  ','Option'] ;
+      const msg = ['Ya Maryam sabak il 5ir ena mit2akda innik makch bich tjib akal mil 18 fil ','wlh ya Maryam rak nchlh bich tfara7na lkol ou tfara7 5alaila ou l3aila wlh raho lik inti il 18 mathmona nchlh fil ','taw chnowa taw moch koltlik mat7otich akal mil 18 Allah\'ın izniyle, çok başarılı olacaksın alanında ','Maryaaam i have confidance on you . i am sure that inchalah you will shine this year for u 18 is nothing in ']
+      let contain={ind:0}
+      document.querySelector('.a1').focus();
+      let obj={}
+      for(let i = 1;i<11;i++){
+        obj['a'+i]=false
+      }
+      let inp = {};
+      for(let i = 1 ;i<11;i++){
+        inp['a'+i] = document.querySelector('.a'+i)
+      }
+      function getFirstUnvalidInput(obj){
+        i = 1;
+        while(i<11 && obj['a'+i] ){
+          i++
+        }
+        return i ;
+      }
+      function isdecimal(ch=''){
+        let i = 0 
+        while (i<ch.length && '0123456789'.includes(ch[i]) ){
+          i++
+        }
+        return i == ch.length && ch != '' }
+        function valid(ch){
+          return (ch.indexOf('.') > -1 ?  isdecimal(ch.slice(0,ch.indexOf('.'))) &&(isdecimal( ch.slice(ch.indexOf('.')+1,ch.length) )) : isdecimal(ch))&&Number(ch)<=20;
+        }
+      function enterPressed(nb){
+        const ch =document.querySelector('.a'+nb).value;
+        if(valid(ch)){
+          if( Number(ch)>=18 && nb != 5 && nb!=7 ){
+            alert('hi')
+            obj['a'+nb]=true;
+            document.querySelector('.a'+nb).classList.add('valid')
+            document.querySelector('.a'+nb).classList.remove('unValid');
+            const i =getFirstUnvalidInput(obj) ;
+            if (i!=11){document.querySelector('.a'+i).focus();}
+            else{display()}
+          
+          }
+          else if(Number(ch)<18 && nb != 5 && nb!=7 && Number(ch)>=13) {
+              document.querySelector('.a'+nb).setCustomValidity(msg[contain.ind]+matiere[nb-1]) ;
+              document.querySelector('.a'+nb).reportValidity();
+              contain.ind= (contain.ind+1)%4;
+            }
+          else if(nb!=7 && Number(ch)<13){
+              document.querySelector('.a'+nb).setCustomValidity('Maryam yizzi mil tfadlik ou 3amer serieusement hetha hatta bil tfadlik maisirich') ;
+              document.querySelector('.a'+nb).reportValidity();
+            }
+          else if(Number(ch)<16 && nb == 5) {
+              document.querySelector('.a'+nb).setCustomValidity('ya Maryam il Français ta3 lbac sehil 3l5r raho  ti barcha 3bdel mafetitch il 10 ou fil bac tharba 16 , donc 16 fih evidant nchlh') ;
+              document.querySelector('.a'+nb).reportValidity();
+            }
+          else if (Number(ch)>=16 && nb == 5){
+              obj['a'+nb]=true;
+              document.querySelector('.a'+nb).classList.add('valid')
+              document.querySelector('.a'+nb).classList.remove('unValid');
+              const i =getFirstUnvalidInput(obj) ;
+              if (i!=11){document.querySelector('.a'+i).focus();}
+              else{display()}
+            }
+          else if (nb==7 && Number(ch)<13 ){
+              document.querySelector('.a'+nb).setCustomValidity('Maryam shih il filo s3ib chwaya howa ama nitsawrik tgid rohik fih fil akid nitsawer mostahil tjib fih akal mil 13 nchlh') ;
+              document.querySelector('.a'+nb).reportValidity();
+            }
+          else if (nb==7 && Number(ch)>=13 ){
+              obj['a'+nb]=true;
+              document.querySelector('.a'+nb).classList.add('valid')
+              document.querySelector('.a'+nb).classList.remove('unValid');
+              const i =getFirstUnvalidInput(obj) ;
+              if (i!=11){document.querySelector('.a'+i).focus()}
+             else{display()}
+          }
+      }
+      else {
+        document.querySelector('.a'+nb).setCustomValidity('Veuillez entrer un nombre entre 0 et 20') ;
+        document.querySelector('.a'+nb).reportValidity();
+        obj['a'+nb]=false ;
+      }
+    }
+
+      function clickedAway(nb){
+        const ch = document.querySelector('.a'+nb).value ;
+        if(valid(ch)){
+          obj['a'+nb]=true;
+          document.querySelector('.a'+nb).classList.add('valid');
+          document.querySelector('.a'+nb).classList.remove('unValid');
+          const i =getFirstUnvalidInput(obj) ;
+        }
+        else {
+          obj['a'+nb]=false ;
+          document.querySelector('.a'+nb).classList.remove('valid');
+          document.querySelector('.a'+nb).classList.remove('unValid');
+          if (ch !=''){document.querySelector('.a'+nb).classList.add('unValid');  }
+        }
+      }
+      function display(){
+        const i = getFirstUnvalidInput(obj) ;
+        if (i==11){
+        const res = document.querySelector('.result');
+        const mat = Number(inp['a1'].value);
+        const phy = Number(inp['a2'].value);
+        const svt = Number(inp['a3'].value);
+        const arb = Number(inp['a4'].value);
+        const frc = Number(inp['a5'].value);
+        const eng = Number(inp['a6'].value);
+        const phi = Number(inp['a7'].value);
+        const spt = Number(inp['a8'].value);
+        const inf = Number(inp['a9'].value);
+        let opt = Number(inp['a10'].value);if(opt<10){opt=10}
+        let moye = (mat*4+phy*4+svt+arb+frc+eng+phi+spt+inf+(opt-10))/15;
+        let score = moye*4 + mat*2 + phy*1.5 + 0.5*svt + eng + frc
+        score = Math.round(score*1000)/1000 ;
+        moye = Math.round(moye*100)/100 ;
+        res.innerText = `Mabrouuuuk ! Votre moyenne est ${moye}
+        Votre score est ${score}`
+        res.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+        else{
+          document.querySelector('.a'+i).setCustomValidity('Veuillez entrer un nombre entre 0 et 20') ;
+          document.querySelector('.a'+i).reportValidity();
+        }
+      }
+      function Clear(){
+        document.querySelector('.result').innerText = '';
+        for (let i = 1 ; i<11 ; i++){
+          inp['a'+i].value = '';
+          inp['a'+i].classList.remove('valid');
+          inp['a'+i].classList.remove('unValid');
+          for(let i = 1;i<11;i++){
+            obj['a'+i]=false
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
