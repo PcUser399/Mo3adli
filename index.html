@@ -62,7 +62,10 @@
         text-align: center;
       }
       .p2{
-        margin-left: 332px;
+        margin-left: 316px;
+      }
+      .a10{
+        margin-left: 332px ;
       }
       .calculer{
         background-color: transparent;
@@ -106,10 +109,14 @@
       .p2:hover,
       .p2:focus{
         padding : 15px 60px;
-        margin-left:297px;
+        margin-left:281px;
         transition: 0.25s;
         border:2px solid rgb(66, 210, 66);
         outline: none;
+      }
+      .a10:focus,
+      .a10:hover{
+        margin-left:297px;
       }
       .valid{
         border:2px solid green;
@@ -147,6 +154,10 @@
         width: 1200px; 
         margin: 0px auto; 
       }
+      .stopDefaultFocus{
+        border: none;
+        background-color: transparent;
+      }
     </style>
   </head>
 
@@ -159,23 +170,23 @@
     <button class="section c">Controle</button>
     <p class="Session">Session principale</p>
     <input class="input p1 a1" placeholder="Math" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p2 a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p1 a3" placeholder="Science" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p2 a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p1 a5" placeholder="Français" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p2 a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p1 a7" placeholder="Philo" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p2 a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')">
-    <div style="display:none"></div>
+    <button class="stopDefaultFocus"></button>
     <input class="input p1 a9" placeholder="Informatique" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')">
-    <button class="clear" onclick="Clear()"  style="display:none" >Clear</button>
+    <button class="clear" onclick="Clear()">Clear</button>
     <input class="input p2 a10" placeholder="Option" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')">
     <p></p>
     <button class="calculer a11" onclick="display()">Calculer</button>
@@ -317,14 +328,11 @@
           }
         }
       }
-      if (screen.orientation && screen.orientation.lock) {
-         document.documentElement.requestFullscreen().then(() => {
-         screen.orientation.lock('landscape').catch(err => {
-         console.log('Cannot lock orientation:', err);
-          });
-        });
-      }
+      document.body.addEventListener('click', () => {
+         document.documentElement.requestFullscreen()
+         .then(() => screen.orientation.lock("landscape"))
+          .catch(err => console.error(err));
+      });
     </script>
   </body>
 </html>
-
