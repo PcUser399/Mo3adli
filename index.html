@@ -175,7 +175,7 @@
     <input class="input p2 a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')">
     <div style="display:none"></div>
     <input class="input p1 a9" placeholder="Informatique" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')">
-    <button class="clear" onclick="Clear()">Clear</button>
+    <button class="clear" onclick="Clear()"  style="display:none" >Clear</button>
     <input class="input p2 a10" placeholder="Option" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')">
     <p></p>
     <button class="calculer a11" onclick="display()">Calculer</button>
@@ -327,3 +327,4 @@
     </script>
   </body>
 </html>
+
