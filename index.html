@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Mo3adli</title>
+    <meta name="screen-orientation" content="landscape">
+    <meta name="x5-orientation" content="landscape">
     <style>
       body{
         background-color: black;
@@ -156,17 +158,17 @@
     <button class="section p">Principale</button>
     <button class="section c">Controle</button>
     <p class="Session">Session principale</p>
-    <input class="input p1 a1" placeholder="Math" onkeydown="if(event.key=='Enter'){enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')">
-    <input class="input p2 a2" placeholder="Physique" onkeydown="if(event.key=='Enter'){enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')">
-    <input class="input p1 a3" placeholder="Science" onkeydown="if(event.key=='Enter'){enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')">
-    <input class="input p2 a4" placeholder="Arabe" onkeydown="if(event.key=='Enter'){enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')">
-    <input class="input p1 a5" placeholder="Français" onkeydown="if(event.key=='Enter'){enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')">
-    <input class="input p2 a6" placeholder="Anglais" onkeydown="if(event.key=='Enter'){enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')">
-    <input class="input p1 a7" placeholder="Philo" onkeydown="if(event.key=='Enter'){enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')">
-    <input class="input p2 a8" placeholder="Sport" onkeydown="if(event.key=='Enter'){enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')">
-    <input class="input p1 a9" placeholder="Informatique" onkeydown="if(event.key=='Enter'){enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')">
+    <input class="input p1 a1" placeholder="Math" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')">
+    <input class="input p2 a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')">
+    <input class="input p1 a3" placeholder="Science" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')">
+    <input class="input p2 a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')">
+    <input class="input p1 a5" placeholder="Français" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')">
+    <input class="input p2 a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')">
+    <input class="input p1 a7" placeholder="Philo" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')">
+    <input class="input p2 a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')">
+    <input class="input p1 a9" placeholder="Informatique" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')">
     <button class="clear" onclick="Clear()">Clear</button>
-    <input class="input p2 a10" placeholder="Option" onkeydown="if(event.key=='Enter'){enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')">
+    <input class="input p2 a10" placeholder="Option" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')">
     <p></p>
     <button class="calculer a11" onclick="display()">Calculer</button>
     <p></p>
@@ -309,6 +311,4 @@
       }
     </script>
   </body>
-
 </html>
-
