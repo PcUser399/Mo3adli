@@ -2,142 +2,120 @@
 <html>
   <head>
     <title>Mo3adli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="screen-orientation" content="landscape">
     <meta name="x5-orientation" content="landscape">
-    <style>
+     <style>
       body{
         background-color: black;
-        color:white;
+        padding: 20px 0px;
+
       }
-      .title{
-        font-size : 44px;
-        font-weight: bolder;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 3px;
-        line-height: 55px;
-        margin-top: 35px;
+        .title-container-and-options{
+          width: 100%;
+          height: auto;
+          text-align: center;
+          /* padding: 10px; */
+        }
+        .title{
+          color: white;
+          font-size: 26px;
+          font-weight: bolder;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 2px;
+          line-height: 33px;
+          font-family: serif;
+        }
+        .section-container{
+          margin-top: 28.5px;
+          display: flex;
+          justify-content: center;
+          gap: 25px;
+        }
+        .section{
+          padding: 10px 0px;
+          min-width: 80px;
+          font: 14px Arial ;
+          background-color: #1ebba3;
+          text-align: center;
+          border: 5px solid #099983;
+          border-radius: 30px;
+          color: white;
+          outline: none;;
         
-      }
-      .t2{
-        margin-left: 432px;
-      }
-      .input{
-        margin-left:207px;
-        background-color: transparent;
-        border:2px solid #3498db;
-        padding : 15px 25px;
-        border-radius: 50px;
-        margin-top: 25px;
-        margin-bottom: 15px;
-        color: white;
-        text-align: center;
-        transition: 0.25s;
-      }
-      .section{
-        padding:10px 20px;
-        font: 14px Arial ;
-        background-color: #1ebba3;
-        border: 5px solid #099983;
-        border-radius: 30px;
-        color: white;
-        margin : 0px 10px;
-        display: inline-block;
-        cursor:pointer;
-      }
-      .p{
-        margin-left:478px;
-      }
-      .Session{
-        color: gray;
-        text-transform: uppercase;
-        font: 20px serif ;
-        margin-left: 476px;
-        letter-spacing: 3px;
-        text-decoration: underline;
-        outline: none;
-      } 
-      input::placeholder {
-        font: 15px serif;
-        text-align: center;
-      }
-      .p2{
-        margin-left: 316px;
-      }
-      .a10{
-        margin-left: 332px ;
-      }
-      .calculer{
-        background-color: transparent;
-        color: white;
-        text-align: center;
-        font: 20px serif;
-        padding: 10px 250px;
-        border: 2px solid rgb(66, 210, 66);
-        border-radius: 50px;
-        cursor: pointer;
-        margin-left: 307px;
-        transition: 0.25s;
-        outline: none;
-      }
-      .calculer:hover{
-        margin-left: 257px;
-        padding: 10px 300px;
-        background-color: rgb(66, 210, 66);
-        transition: 0.25s;
-      }
-      .press,
-      .calculer:active{
-        background-color: rgb(36, 100, 36);
-      }
-      .section:hover{
-        background-color: rgb(9, 153, 131) ;
-        border: 5px solid rgb(0, 110, 100);
+          display: inline-block;
+          cursor:pointer;
+          margin-bottom: 25px;
+        }
+        .section:hover{
+          background-color: rgb(9, 153, 131) ;
+          border: 5px solid rgb(0, 110, 100);
       }
       .section:active{
-        background-color: rgb(0, 90, 80);
+          background-color: rgb(0, 90, 80);
       }
-      .p1:hover,
-      .p1:focus{
-        padding : 15px 60px;
-        margin-left:172px;
-        margin-right: -35px; 
-        transition: 0.25s;
-        border:2px solid rgb(66, 210, 66);
-        outline: none;
+        .session{
+          color: gray;
+          margin-bottom: 50px;
+          text-transform: uppercase;
+          font: 20px serif ;
+          letter-spacing: 3px;
+          text-decoration: underline;
+          outline: none;
+          text-align: center;
+          
+        }
+        .inputs-container{
+          display: grid;
+          margin: 25px 0px;
+          align-items: center;
+          width: auto;  
+          grid-template-columns: 1fr 0.01fr 1fr;
+          justify-items: s;
+          height: auto;
+        }
+        .first-element{
+          text-align: center;
+        }
+        .middal-element{
+          text-align: center;
+        }
+        .right-element{
+          text-align: center;
+        }
+        .input{
+          background-color: transparent;
+          border:2px solid #3498db;
+          height: 38px;
+          width: 170px;
+          border-radius: 50px;
+          color: white;
+          text-align: center;
+          transition: 0.25s;
+          min-width: 0px;
+          outline: none;
       }
-      .p2:hover,
-      .p2:focus{
-        padding : 15px 60px;
-        margin-left:281px;
-        transition: 0.25s;
-        border:2px solid rgb(66, 210, 66);
-        outline: none;
+      .input::placeholder{
+        font-family: serif;
       }
-      .a10:focus,
-      .a10:hover{
-        margin-left:297px;
-      }
-      .valid{
-        border:2px solid green;
-      }
-      .unValid{
-        border:2px solid red;
-      }
-      .result{
-        font-size: 25px;
+      .stopDefaultFocus{
+        border: none;
+        background-color: transparent;
+        min-width: 0px;
+        width: 5px;
+        /* display: none; */
       }
       .clear{
-        padding:5px 55px;
+        padding:5px 25px;
         font: 20px Arial ;
+        text-align: center;
         background-color: #df0000;
         border: 5px solid #930000;
         border-radius: 50px;
         color: white;
-        margin-left : 76.5px;
-        margin-right: -248.5px;
-        display: inline-block;
         cursor:pointer;
+        outline: none;
       }
       .clear:hover{
         background-color: rgb(165, 0, 0);
@@ -146,54 +124,181 @@
       .clear:active{
         background-color:rgb(75, 0, 0) ;
       }
-      .container {
-        width: 1200px;             /* fixed size like on your laptop */
-        margin:0px auto;            /* center horizontally */
-      }
-      .tit{
-        width: 1200px; 
-        margin: 0px auto; 
-      }
-      .stopDefaultFocus{
-        border: none;
+      .calculer{
         background-color: transparent;
+        color: white;
+        text-align: center;
+        font: 20px serif;
+        padding: 10px 175px;
+        border: 2px solid rgb(66, 210, 66);
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
       }
-    </style>
+
+      .calculer:active{
+        background-color: rgb(36, 100, 36);
+        
+      }
+      .activateAnimation{
+        animation :  whide 0.25s ease forwards ;
+      }
+      .hideAnimation{
+        animation: shrink 0.25s ease forwards;
+      }
+      @keyframes whide {
+        from{width: 421.75px;}
+        to{width: 470px;background-color:rgb(36, 100, 36) ;}
+      }
+
+      @keyframes shrink {
+        from{width:470px;background-color:rgb(36, 100, 36)}
+        to{width: 421.75px;;background-color:transparent }
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .input:hover{
+          width: 210px;
+        /* margin-left: 20px; */
+          transition: 0.25s;
+          border:2px solid rgb(66, 210, 66);
+        }
+      }
+      .input:focus{
+        width: 210px;
+        /* margin-left: 20px; */
+        transition: 0.25s;
+        border:2px solid rgb(66, 210, 66);
+        
+      }
+      @media(min-width : 575px){
+      #last{
+
+        padding-left: 6.95vw;
+        padding-right: 6.95vw;
+
+        display: grid;
+        grid-template-columns: 1fr 0.41fr 1fr;
+      }
+      #fl{
+        text-align: center;
+      }
+      #rl{
+        text-align: center;
+      }
+    }
+      .hide{
+        display: none;
+      }
+      @media(max-width : 575px){
+        .input{
+          width: 110px;
+        }
+
+        #c{
+          display: none;
+        }
+        #c2{
+          display:ruby;
+          margin-bottom: 5px;
+        }
+        .calculer{
+          padding: 10px 105px;
+        }
+        @keyframes whide {
+        from{padding: 10px 105px;}
+        to{padding: 10px 125px;background-color:rgb(36, 100, 36) ;}
+        }
+
+        @keyframes shrink {
+          from{padding: 10px 125px;background-color:rgb(36, 100, 36)}
+          to{padding: 10px 105px;background-color:transparent }
+        }
+        .inputs-container{
+          grid-template-columns: 1fr 0.2fr 1fr;
+        }
+        .input:focus{
+          width: 150px;
+        }
+
+      }
+      .valid{
+        border:2px solid green;
+      }
+      .unValid{
+        border:2px solid red;
+      }
+      .result{
+        font-size: 20px;
+        line-height: 25px;
+      }
+     </style>
   </head>
 
   <body>
-    <div class="tit">
-    <p class="  title"> Calculer Moyenne et Score BAC MATHÉMATIQUES </p>
+    <div class="title-container-and-options">
+        <div class="title">Calculer Moyenne et Score BAC MATHÉMATIQUES</div>
+        <div class="section-container">
+          <button class="section">Principale</button>
+          <button class="section">&nbspControle&nbsp</button>
+        </div>
+        <div class="session">Session principale</div>
+
+
+
+
+        <div class="inputs-container">
+          <div class="first-element"> <input class="input a1" placeholder="Math" onkeypress="if(event.key=='Enter'){ enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')"> </div>
+          <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
+          <div class="right-element"> <input class="input a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){ enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')"> </div>
+        </div>
+
+        <div class="inputs-container">
+          <div class="first-element"> <input class="input a3" placeholder="Science" onkeypress="if(event.key=='Enter'){ enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')"> </div>
+          <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
+          <div class="right-element"> <input class="input a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){ enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')"> </div>
+        </div>
+
+        <div class="inputs-container">
+          <div class="first-element"> <input class="input a5" placeholder="Français" onkeypress="if(event.key=='Enter'){ enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')"> </div>
+          <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
+          <div class="right-element"> <input class="input a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){ enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')"> </div>
+        </div>
+
+        <div class="inputs-container">
+          <div class="first-element"> <input class="input a7" placeholder="Philo" onkeypress="if(event.key=='Enter'){ enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')"> </div>
+          <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
+          <div class="right-element"> <input class="input a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')"> </div>
+        </div>
+
+        <div class="inputs-container" id="last">
+          <div class="first-element" id="fl"> <input class="input a9" placeholder="Informatique" id="info" onkeypress="if(event.key=='Enter'){ enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')"> </div>
+          <div class="middal-element" id="ml"> <button class="clear" id="c" onclick="Clear()">Clear</button> </div>
+          <div class="right-element" id="rl"> <input class="input a10" placeholder="Option" id="opt" onkeypress="if(event.key=='Enter'){ enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')"> </div>
+        </div>
+         <button class="clear hide 11" id="c2" onclick="Clear()">Clear</button><p></p> 
+
+        <button class="calculer" onclick="display()">Calculer</button>
+        <p class="result title" onclick=""></p>
     </div>
-    <div class="container">
-    <button class="section p">Principale</button>
-    <button class="section c">Controle</button>
-    <p class="Session">Session principale</p>
-    <input class="input p1 a1" placeholder="Math" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p2 a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p1 a3" placeholder="Science" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p2 a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p1 a5" placeholder="Français" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p2 a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p1 a7" placeholder="Philo" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p2 a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')">
-    <button class="stopDefaultFocus"></button>
-    <input class="input p1 a9" placeholder="Informatique" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')">
-    <button class="clear" onclick="Clear()">Clear</button>
-    <input class="input p2 a10" placeholder="Option" onkeypress="if(event.key=='Enter'){ event.preventDefault(); enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')">
-    <p></p>
-    <button class="calculer a11" onclick="display()">Calculer</button>
-    <p></p>
-    <p class="result title" onclick=""></p>
-    </div>
+
     <script>
+      document.body.addEventListener('touchstart', () => {
+         document.documentElement.requestFullscreen()
+         .then(() => screen.orientation.lock("landscape"))
+          .catch(err => console.error(err));
+      });
+      let r = false ;
+      let b = false ;
+      document.querySelector('.calculer').addEventListener('touchstart',()=>{ r = false ;b=false ; document.querySelector('.calculer').classList.remove('hideAnimation')
+        document.querySelector('.calculer').classList.add('activateAnimation')
+        console.log(document.querySelector('.calculer'));
+      })
+      document.querySelector('.calculer').addEventListener('touchend',()=>{ b = true ; r && document.querySelector('.calculer').classList.replace('activateAnimation','hideAnimation')})
+      document.querySelector('.calculer').addEventListener('animationend',()=> {  r = true ; b && document.querySelector('.calculer').classList.replace('activateAnimation','hideAnimation')})
+
+
+
+
       const matiere = ['Math','Physique','Science','Arbi','Français','Anglais','Philo','Sport','Info  ','Option'] ;
       const msg = ['Ya Maryam sabak il 5ir ena mit2akda innik makch bich tjib akal mil 18 fil ','wlh ya Maryam rak nchlh bich tfara7na lkol ou tfara7 5alaila ou l3aila wlh raho lik inti il 18 mathmona nchlh fil ','taw chnowa taw moch koltlik mat7otich akal mil 18 Allah\'ın izniyle, çok başarılı olacaksın alanında ','Maryaaam i have confidance on you . i am sure that inchalah you will shine this year for u 18 is nothing in ']
       let contain={ind:0}
@@ -229,8 +334,9 @@
             obj['a'+nb]=true;
             document.querySelector('.a'+nb).classList.add('valid')
             document.querySelector('.a'+nb).classList.remove('unValid');
+            document.activeElement.blur();
             const i =getFirstUnvalidInput(obj) ;
-            if (i!=11){document.querySelector('.a'+i).focus();}
+            if (i!=11){document.querySelector('.a'+i).focus()}
             else{display()}
           
           }
@@ -251,8 +357,9 @@
               obj['a'+nb]=true;
               document.querySelector('.a'+nb).classList.add('valid')
               document.querySelector('.a'+nb).classList.remove('unValid');
+              document.activeElement.blur();
               const i =getFirstUnvalidInput(obj) ;
-              if (i!=11){document.querySelector('.a'+i).focus();}
+              if (i!=11){document.querySelector('.a'+i).focus()}
               else{display()}
             }
           else if (nb==7 && Number(ch)<13 ){
@@ -263,6 +370,7 @@
               obj['a'+nb]=true;
               document.querySelector('.a'+nb).classList.add('valid')
               document.querySelector('.a'+nb).classList.remove('unValid');
+              document.activeElement.blur();
               const i =getFirstUnvalidInput(obj) ;
               if (i!=11){document.querySelector('.a'+i).focus()}
              else{display()}
@@ -328,11 +436,7 @@
           }
         }
       }
-      document.body.addEventListener('click', () => {
-         document.documentElement.requestFullscreen()
-         .then(() => screen.orientation.lock("landscape"))
-          .catch(err => console.error(err));
-      });
     </script>
+
   </body>
 </html>
