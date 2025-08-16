@@ -101,6 +101,7 @@
       }
       .stopDefaultFocus{
         border: none;
+        position: absolute;
         background-color: transparent;
         min-width: 0px;
         width: 5px;
@@ -249,25 +250,25 @@
         <div class="inputs-container">
           <div class="first-element"> <input class="input a1" placeholder="Math" onkeypress="if(event.key=='Enter'){ enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')"> </div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){ enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')"> </div>
+          <div class="right-element"> <input class="input a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){ enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')"> <button class="stopDefaultFocus"></button>  </div>
         </div>
 
         <div class="inputs-container">
           <div class="first-element"> <input class="input a3" placeholder="Science" onkeypress="if(event.key=='Enter'){ enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')"> </div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){ enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')"> </div>
+          <div class="right-element"> <input class="input a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){ enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')"> <button class="stopDefaultFocus"></button>  </div>
         </div>
 
         <div class="inputs-container">
           <div class="first-element"> <input class="input a5" placeholder="Français" onkeypress="if(event.key=='Enter'){ enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')"> </div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){ enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')"> </div>
+          <div class="right-element"> <input class="input a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){ enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')"> <button class="stopDefaultFocus"></button>  </div>
         </div>
 
         <div class="inputs-container">
           <div class="first-element"> <input class="input a7" placeholder="Philo" onkeypress="if(event.key=='Enter'){ enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')"> </div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')"> </div>
+          <div class="right-element"> <input class="input a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')"> <button class="stopDefaultFocus"></button> </div>
         </div>
 
         <div class="inputs-container" id="last">
