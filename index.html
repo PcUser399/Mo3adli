@@ -320,8 +320,8 @@
     </div>
 
     <script>
-      document.querySelectorAll('.input').forEach((el)=>{
-          el.addEventListener('touchstart', () => {
+      document.querySelectorAll('input').forEach((el)=>{
+          el.addEventListener('click', () => {
               document.documentElement.requestFullscreen()
               .then(() => screen.orientation.lock("landscape"))
                 .catch(err => console.error(err));
@@ -499,4 +499,3 @@
 
   </body>
 </html>
-
