@@ -292,7 +292,7 @@
 
       })
       document.querySelectorAll('.input').forEach((el)=>{
-        el.addEventListener('focus',()=>{el.scrollIntoView( {behavior: "smooth" , block :"center"})})
+        el.addEventListener('focus',()=>{el.scrollIntoView( {behavior: "smooth" , block :"start"})})
       })
       document.body.addEventListener('touchstart', () => {
          document.documentElement.requestFullscreen()
