@@ -283,6 +283,17 @@
     </div>
 
     <script>
+      document.querySelectorAll('.input').forEach((el)=>{
+          el.addEventListener('touchstart', () => {
+              document.documentElement.requestFullscreen()
+              .then(() => screen.orientation.lock("landscape"))
+                .catch(err => console.error(err));
+            });
+
+      })
+      document.querySelectorAll('.input').forEach((el)=>{
+        el.addEventListener('focus',()=>{el.scrollIntoView( {behavior: "smooth" , block :"center"})})
+      })
       document.body.addEventListener('touchstart', () => {
          document.documentElement.requestFullscreen()
          .then(() => screen.orientation.lock("landscape"))
