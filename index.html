@@ -472,10 +472,10 @@
         let opt = Number(inp['a10'].value);if(opt<10){opt=10}
         let moye = (mat*4+phy*4+svt+arb+frc+eng+phi+spt+inf+(opt-10))/15;
         let score = moye*4 + mat*2 + phy*1.5 + 0.5*svt + eng + frc
-        score = Math.round(score*1000)/1000 ;
-        moye = Math.round(moye*100)/100 ;
-        res.innerText = `Mabrouuuuk ! Votre moyenne est ${moye}
-        Votre score est ${score}`
+        res.innerText = `Mabrouuuuk ! Votre moyenne est ${moye.toFixed(2)}
+        Votre score est ${score.toFixed(3)}
+        
+        bi2ithni allah bich tjib haka ou ma5ir Ayez confiance en vous`
         res.scrollIntoView({ behavior: "smooth", block: "center" });
       }
         else{
