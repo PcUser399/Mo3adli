@@ -71,7 +71,7 @@
           margin: 25px 0px;
           align-items: center;
           width: auto;  
-          grid-template-columns: 1fr 0.01fr 1fr;
+          grid-template-columns: 1fr 0.41fr 1fr;
           justify-items: s;
           height: auto;
         }
@@ -104,7 +104,6 @@
         position: absolute;
         background-color: transparent;
         min-width: 0px;
-        width: 5px;
         /* display: none; */
       }
       .clear{
@@ -172,21 +171,14 @@
         
       }
       @media(min-width : 575px){
-      #last{
-
-        padding-left: 6.95vw;
-        padding-right: 6.95vw;
-
-        display: grid;
-        grid-template-columns: 1fr 0.41fr 1fr;
+      .big{
+        padding: 0 50px;
       }
-      #fl{
-        text-align: center;
+      .clear{
+        padding:5px 17.5px;
       }
-      #rl{
-        text-align: center;
-      }
-    }
+  
+  }
       .hide{
         display: none;
       }
@@ -232,6 +224,45 @@
         font-size: 20px;
         line-height: 25px;
       }
+      .direct-input-container{
+        height: auto;
+        width: auto;
+        position: relative;
+        display: inline-block ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .lab{
+        position: absolute;
+        padding: 0px 5px;
+        /* left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+        font-family: serif;
+        font-size: 14px;
+        color: #999;
+        transition: 0.25s;
+        z-index: 1111;
+        background-color: black;
+        cursor: text;
+      }
+      input::placeholder{
+        font-size: 0.1px;
+        color: transparent;
+      }
+      .input:focus + .lab,
+      .input:not(:placeholder-shown) +.lab{
+        transform: translate(0px,-21px);
+        color :#402bde;
+        
+      }
+      .disp-unvalid{
+        color: red !important;
+      }
+      .disp-valid{
+        color: green !important;
+      }
      </style>
   </head>
 
@@ -245,37 +276,42 @@
         <div class="session">Session principale</div>
 
 
-
+      <div class="big">
 
         <div class="inputs-container">
-          <div class="first-element"> <input class="input a1" placeholder="Math" onkeypress="if(event.key=='Enter'){ enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')"> </div>
+          <div class="first-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a1" id="i1"  onkeypress="if(event.key=='Enter'){ enterPressed(1)}" onblur="clickedAway(1)" onkeydown="document.querySelector('.a'+1).setCustomValidity('')"><label class="lab" for="i1" id="l1">Math</label> </div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a2" placeholder="Physique" onkeypress="if(event.key=='Enter'){ enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')"> <button class="stopDefaultFocus"></button>  </div>
+          <div class="right-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a2" id="i2" onkeypress="if(event.key=='Enter'){ enterPressed(2)}" onblur="clickedAway(2)" onkeydown="document.querySelector('.a'+2).setCustomValidity('')"> <label class="lab" for="i2" id="l2">Physique</label> </div>
+          <button class="stopDefaultFocus"></button> 
         </div>
 
         <div class="inputs-container">
-          <div class="first-element"> <input class="input a3" placeholder="Science" onkeypress="if(event.key=='Enter'){ enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')"> </div>
+          <div class="first-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a3" id="i3" onkeypress="if(event.key=='Enter'){ enterPressed(3)}" onblur="clickedAway(3)" onkeydown="document.querySelector('.a'+3).setCustomValidity('')"> <label class="lab" for="i3" id="l3">Science</label></div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a4" placeholder="Arabe" onkeypress="if(event.key=='Enter'){ enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')"> <button class="stopDefaultFocus"></button>  </div>
+          <div class="right-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a4" id="i4" onkeypress="if(event.key=='Enter'){ enterPressed(4)}" onblur="clickedAway(4)" onkeydown="document.querySelector('.a'+4).setCustomValidity('')"> <label class="lab" for="i4" id="l4">Arabe</label>  </div>
+          <button class="stopDefaultFocus"></button> 
         </div>
 
         <div class="inputs-container">
-          <div class="first-element"> <input class="input a5" placeholder="Français" onkeypress="if(event.key=='Enter'){ enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')"> </div>
+          <div class="first-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a5" id="i5" onkeypress="if(event.key=='Enter'){ enterPressed(5)}" onblur="clickedAway(5)" onkeydown="document.querySelector('.a'+5).setCustomValidity('')"> <label class="lab" for="i5" id="l5">Français</label> </div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a6" placeholder="Anglais" onkeypress="if(event.key=='Enter'){ enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')"> <button class="stopDefaultFocus"></button>  </div>
+          <div class="right-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a6" id="i6" onkeypress="if(event.key=='Enter'){ enterPressed(6)}" onblur="clickedAway(6)" onkeydown="document.querySelector('.a'+6).setCustomValidity('')"> <label class="lab" for="i6" id="l6">Anglais</label>  </div>
+          <button class="stopDefaultFocus"></button> 
         </div>
 
         <div class="inputs-container">
-          <div class="first-element"> <input class="input a7" placeholder="Philo" onkeypress="if(event.key=='Enter'){ enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')"> </div>
+          <div class="first-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a7" id="i7" onkeypress="if(event.key=='Enter'){ enterPressed(7)}" onblur="clickedAway(7)" onkeydown="document.querySelector('.a'+7).setCustomValidity('')"> <label class="lab" for="i7" id="l7">Philo</label> </div>
           <div class="middal-element"> <button class="stopDefaultFocus"></button> </div>
-          <div class="right-element"> <input class="input a8" placeholder="Sport" onkeypress="if(event.key=='Enter'){ enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')"> <button class="stopDefaultFocus"></button> </div>
+          <div class="right-element direct-input-container"> <input autocomplete="off" placeholder="." class="input a8" id="i8" onkeypress="if(event.key=='Enter'){ enterPressed(8)}" onblur="clickedAway(8)" onkeydown="document.querySelector('.a'+8).setCustomValidity('')"> <label class="lab" for="i8" id="l8">Sport</label> </div>
+          <button class="stopDefaultFocus"></button> 
         </div>
 
         <div class="inputs-container" id="last">
-          <div class="first-element" id="fl"> <input class="input a9" placeholder="Informatique" id="info" onkeypress="if(event.key=='Enter'){ enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')"> </div>
+          <div class="first-element direct-input-container" id="fl"> <input autocomplete="off" placeholder="." class="input a9" id="info" onkeypress="if(event.key=='Enter'){ enterPressed(9)}" onblur="clickedAway(9)" onkeydown="document.querySelector('.a'+9).setCustomValidity('')"> <label class="lab" for="info" id="l9">Informatique</label> </div>
           <div class="middal-element" id="ml"> <button class="clear" id="c" onclick="Clear()">Clear</button> </div>
-          <div class="right-element" id="rl"> <input class="input a10" placeholder="Option" id="opt" onkeypress="if(event.key=='Enter'){ enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')"> </div>
+          <div class="right-element direct-input-container" id="rl"> <input autocomplete="off" placeholder="." class="input a10"  id="opt" onkeypress="if(event.key=='Enter'){ enterPressed(10)}" onblur="clickedAway(10)" onkeydown="document.querySelector('.a'+10).setCustomValidity('')"> <label class="lab" for="opt" id="l10">Option</label>  </div>
         </div>
+      </div>
          <button class="clear hide 11" id="c2" onclick="Clear()">Clear</button><p></p> 
 
         <button class="calculer" onclick="display()">Calculer</button>
@@ -292,7 +328,12 @@
 
       })
       document.querySelectorAll('.input').forEach((el)=>{
-        el.addEventListener('focus',()=>{el.scrollIntoView( {behavior: "smooth" , block :"start"})})
+        el.addEventListener('focus',()=>{const isMobile = window.innerWidth < 768;el.scrollIntoView( {behavior: "smooth" , block : isMobile ? "start" : "center" })})
+      })
+      document.querySelectorAll('.input').forEach((el,ind)=>{
+        el.addEventListener('click',()=>{document.getElementById('l'+(ind+1)).classList.remove('disp-valid');
+          document.getElementById('l'+(ind+1)).classList.remove('disp-unvalid');
+        })
       })
       document.body.addEventListener('touchstart', () => {
          document.documentElement.requestFullscreen()
@@ -401,13 +442,17 @@
           obj['a'+nb]=true;
           document.querySelector('.a'+nb).classList.add('valid');
           document.querySelector('.a'+nb).classList.remove('unValid');
-          const i =getFirstUnvalidInput(obj) ;
+          document.getElementById('l'+nb).classList.remove('disp-valid');
+          document.getElementById('l'+nb).classList.add('disp-valid');
+          console.log(document.getElementById('l'+nb).classList)
         }
         else {
           obj['a'+nb]=false ;
           document.querySelector('.a'+nb).classList.remove('valid');
           document.querySelector('.a'+nb).classList.remove('unValid');
-          if (ch !=''){document.querySelector('.a'+nb).classList.add('unValid');  }
+          document.getElementById('l'+nb).classList.remove('disp-valid');
+          if (ch !=''){document.querySelector('.a'+nb).classList.add('unValid');document.getElementById('l'+nb).classList.add('disp-unvalid')  }
+          else{document.getElementById('l'+nb).classList.remove('disp-unvalid');document.getElementById('l'+nb).classList.remove('disp-valid')  }
         }
       }
       function display(){
