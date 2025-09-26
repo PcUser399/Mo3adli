@@ -384,7 +384,6 @@
       function enterPressed(nb){
         const ch =document.querySelector('.a'+nb).value;
         if(valid(ch)){
-          if( Number(ch)>=18 && nb != 5 && nb!=7 ){
             obj['a'+nb]=true;
             document.querySelector('.a'+nb).classList.add('valid')
             document.querySelector('.a'+nb).classList.remove('unValid');
@@ -392,47 +391,10 @@
             const i =getFirstUnvalidInput(obj) ;
             if (i!=11){document.querySelector('.a'+i).focus()}
             else{display()}
-          
-          }
-          else if(Number(ch)<18 && nb != 5 && nb!=7 && Number(ch)>=13) {
-              document.querySelector('.a'+nb).setCustomValidity(msg[contain.ind]+matiere[nb-1]) ;
-              // document.querySelector('.a'+nb).reportValidity();
-              contain.ind= (contain.ind+1)%4;
-            }
-          else if(nb!=7 && Number(ch)<13){
-              document.querySelector('.a'+nb).setCustomValidity('Maryam yizzi mil tfadlik ou 3amer serieusement hetha hatta bil tfadlik maisirich') ;
-              // document.querySelector('.a'+nb).reportValidity();
-            }
-          else if(Number(ch)<16 && nb == 5) {
-              document.querySelector('.a'+nb).setCustomValidity('ya Maryam il Français ta3 lbac sehil 3l5r raho  ti barcha 3bdel mafetitch il 10 ou fil bac tharba 16 , donc 16 fih evidant nchlh') ;
-              // document.querySelector('.a'+nb).reportValidity();
-            }
-          else if (Number(ch)>=16 && nb == 5){
-              obj['a'+nb]=true;
-              document.querySelector('.a'+nb).classList.add('valid')
-              document.querySelector('.a'+nb).classList.remove('unValid');
-              document.activeElement.blur();
-              const i =getFirstUnvalidInput(obj) ;
-              if (i!=11){document.querySelector('.a'+i).focus()}
-              else{display()}
-            }
-          else if (nb==7 && Number(ch)<13 ){
-              document.querySelector('.a'+nb).setCustomValidity('Maryam shih il filo s3ib chwaya howa ama nitsawrik tgid rohik fih fil akid nitsawer mostahil tjib fih akal mil 13 nchlh') ;
-              // document.querySelector('.a'+nb).reportValidity();
-            }
-          else if (nb==7 && Number(ch)>=13 ){
-              obj['a'+nb]=true;
-              document.querySelector('.a'+nb).classList.add('valid')
-              document.querySelector('.a'+nb).classList.remove('unValid');
-              document.activeElement.blur();
-              const i =getFirstUnvalidInput(obj) ;
-              if (i!=11){document.querySelector('.a'+i).focus()}
-             else{display()}
-          }
       }
       else {
         document.querySelector('.a'+nb).setCustomValidity('Veuillez entrer un nombre entre 0 et 20') ;
-        // document.querySelector('.a'+nb).reportValidity();
+        document.querySelector('.a'+nb).reportValidity();
         obj['a'+nb]=false ;
       }
     }
@@ -480,7 +442,7 @@
       }
         else{
           document.querySelector('.a'+i).setCustomValidity('Veuillez entrer un nombre entre 0 et 20') ;
-          document.querySelector('.a'+i).reportValidity();
+          document.querySelector('.a'+i).;
         }
       }
       function Clear(){
@@ -499,4 +461,5 @@
 
   </body>
 </html>
+
 
